@@ -102,31 +102,39 @@ a:hover {
     padding: 10px;
     background-image: url("../img/taco.jpg");
     background-size: cover;
+
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "menuHeader menuHeader menuHeader menuHeader"
+    "menuA menuB menuC menuD"
+
   }
+  
+  #menuHeader {
+    grid-area: menuHeader;
+  }
+  
 
-
-
+  #menuA {
+    grid-area: menuA;
+  }
+  
+  #menuB {
+    grid-area: menuB;
+  }
+  #menuC {
+    grid-area: menuC;
+  }
+  #menuD {
+    grid-area: menuD;
+  }
 
 .menuItem {
   display: inline-block;
   padding: 10px 20px;
   line-height: 25px;
 }
-
-#footer {
-    grid-area: footer;
- }
-  
-h1 {
-    color: lightblue;
-    padding-left: 10px;
-    line-height: 75px;
-}
-  
-h2 {
-  color: peru;
-  padding: 10px 25px;
-} 
 
 
 
@@ -140,6 +148,23 @@ h2 {
   border-style: solid;
   border-color: burlywood;
 }
+
+#footer {
+  grid-area: footer;
+}
+
+h1 {
+  color: lightblue;
+  padding-left: 10px;
+  line-height: 75px;
+}
+
+h2 {
+color: peru;
+padding: 10px 25px;
+} 
+
+
   footer {
     color: peru;
     background-color: burlywood;
