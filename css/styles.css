@@ -1,0 +1,130 @@
+* {
+    /* prevents an automatic margin causing white space */
+    margin: 0px;
+  }
+
+  body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: darkblue;
+}
+
+header {
+   
+    position: fixed;
+    color: lightblue;
+    background-color: darkblue;
+    z-index: 1;
+    height: 40px;
+    width: 100%;
+    padding-top: 5px;
+}
+
+
+a {
+    color: lightblue;
+}
+
+
+nav li {
+    display: inline;
+    padding: 10px 20px;
+    line-height: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: lightblue;
+    background-color: darkblue;
+}
+
+a:hover {
+    color:blueviolet;
+}
+
+.container {
+
+    position:absolute;
+    top:40px;
+}
+
+  main {
+    display: grid;
+  
+    /* sets height of main to 100% of the viewport */
+    height:900px;
+  
+   
+    grid-template-rows: 100px repeat(4, 1fr) 100px;
+
+    /* creates 5 equal sized columns */
+    grid-template-columns: repeat(5, 1fr);
+    margin: 0;
+  
+
+
+    grid-template-areas: "header header header header header"
+    "topArticle topArticle topArticle sideImage sideImage"
+    "bottomArticle bottomArticle bottomArticle sideImage sideImage"
+    "bottomArticle bottomArticle bottomArticle sideImage sideImage" 
+    "mainArticle mainArticle mainArticle mainArticle mainArticle"
+    "footer footer footer footer footer";
+  }
+  
+  
+  
+  #header {
+     grid-area: header;
+  }
+  
+  #topArticle {
+    background-color: lightskyblue;
+    grid-area: topArticle;
+  }
+
+  #topArticle p, #bottomArticle p {
+    padding: 25px;
+  }
+  
+  #sideImage {
+    background-color: lightskyblue;
+    grid-area: sideImage;
+    padding: 50px;
+  }
+  
+  #bottomArticle {
+    background-color: lightskyblue;
+    grid-area: bottomArticle;
+  }
+  
+  #mainArticle {
+    background-color:  lightskyblue;
+    grid-area: mainArticle;
+    padding: 50px;
+    background-image: url('../img/background.jpg');
+}
+
+#mainArticle li {
+  display: inline;
+  padding: 10px 20px;
+  line-height: 25px;
+}
+
+
+#footer {
+    grid-area: footer;
+ }
+  
+h1 {
+    color: lightblue;
+    background-color: darkblue;
+    padding-left: 10px;
+    line-height: 75px;
+}
+  
+  
+  footer {
+    color: lightblue;
+    background-color: darkblue;
+    padding-left: 10px;
+    line-height: 50px;
+}
+
+
