@@ -5,14 +5,14 @@
 
   body {
     font-family:Georgia, 'Times New Roman', Times, serif;
-    background-color: darkblue;
+    background-color: burlywood;
 }
 
 header {
    
     position: fixed;
     color: lightblue;
-    background-color: darkblue;
+    background-color: burlywood; 
     z-index: 1;
     height: 40px;
     width: 100%;
@@ -21,7 +21,9 @@ header {
 
 
 a {
-    color: lightblue;
+    color:peru;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 
@@ -29,49 +31,48 @@ nav li {
     display: inline;
     padding: 10px 20px;
     line-height: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    color: lightblue;
-    background-color: darkblue;
+    background-color: burlywood;
 }
 
 a:hover {
-    color:blueviolet;
+    color:lightblue;
 }
 
 .container {
 
     position:absolute;
     top:40px;
+    text-align: justify;
+    background-color: lightskyblue;
+
 }
 
   main {
     display: grid;
   
-    /* sets height of main to 100% of the viewport */
-    height:900px;
+    height:1000px;
   
    
-    grid-template-rows: 100px repeat(4, 1fr) 100px;
+    grid-template-rows: 200px repeat(4, 1fr) 50px;
 
-    /* creates 5 equal sized columns */
-    grid-template-columns: repeat(5, 1fr);
+    /* creates 4 equal sized columns */
+    grid-template-columns: repeat(4, 1fr);
     margin: 0;
-  
 
-
-    grid-template-areas: "header header header header header"
-    "topArticle topArticle topArticle sideImage sideImage"
-    "bottomArticle bottomArticle bottomArticle sideImage sideImage"
-    "bottomArticle bottomArticle bottomArticle sideImage sideImage" 
-    "mainArticle mainArticle mainArticle mainArticle mainArticle"
-    "footer footer footer footer footer";
+    grid-template-areas: "header header header header"
+    "topArticle topArticle topArticle sideImage"
+    "bottomArticle bottomArticle bottomArticle sideImage"
+    "menu menu menu menu"
+    "menu menu menu menu"
+    "footer footer footer footer";
   }
-  
-  
+    
   
   #header {
      grid-area: header;
+     background-image: url("../img/taco.jpg");
+     background-size: cover;
+     
   }
   
   #topArticle {
@@ -87,6 +88,7 @@ a:hover {
     background-color: lightskyblue;
     grid-area: sideImage;
     padding: 50px;
+    margin: auto;
   }
   
   #bottomArticle {
@@ -94,19 +96,22 @@ a:hover {
     grid-area: bottomArticle;
   }
   
-  #mainArticle {
+  #menu {
     background-color:  lightskyblue;
-    grid-area: mainArticle;
-    padding: 50px;
-    background-image: url('../img/background.jpg');
-}
+    grid-area: menu;
+    padding: 10px;
+    background-image: url("../img/taco.jpg");
+    background-size: cover;
+  }
 
-#mainArticle li {
-  display: inline;
+
+
+
+.menuItem {
+  display: inline-block;
   padding: 10px 20px;
   line-height: 25px;
 }
-
 
 #footer {
     grid-area: footer;
@@ -114,17 +119,30 @@ a:hover {
   
 h1 {
     color: lightblue;
-    background-color: darkblue;
     padding-left: 10px;
     line-height: 75px;
 }
   
-  
-  footer {
-    color: lightblue;
-    background-color: darkblue;
-    padding-left: 10px;
-    line-height: 50px;
+h2 {
+  color: peru;
+  padding: 10px 25px;
+} 
+
+
+
+.menuItem h3, .menuItem p {
+  color: burlywood;
 }
 
 
+.menuItem img {
+  border: 1px;
+  border-style: solid;
+  border-color: burlywood;
+}
+  footer {
+    color: peru;
+    background-color: burlywood;
+    padding-left: 10px;
+    line-height: 50px;
+}
